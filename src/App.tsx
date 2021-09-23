@@ -1,14 +1,31 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
+const Component = React
+  .createElement(
+  'div', 
+  { style: { background: 'blue'}}, 
+  'Olá, mundo'
+)
+
+const HTMLElement = document.createElement('div')
+HTMLElement.style.background = 'red'
+HTMLElement.innerText = 'Teste do Olá, mundo'
+
+console.log(Component);
+console.dir(HTMLElement);
+
+document.body.appendChild(HTMLElement);
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        { Component }
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Olá mundo!!!
         </p>
         <a
           className="App-link"
